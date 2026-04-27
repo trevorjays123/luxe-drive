@@ -13,10 +13,17 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { generalInquiryMessage } from "@/lib/whatsapp";
+import airportImg from "@/assets/services/airport.jpg";
+import corporateImg from "@/assets/services/corporate.jpg";
+import weddingsImg from "@/assets/services/weddings.jpg";
+import toursImg from "@/assets/services/tours.jpg";
+import interstateImg from "@/assets/services/interstate.jpg";
+import securityImg from "@/assets/services/security.jpg";
 
 interface Service {
   id: string;
   Icon: React.ComponentType<{ className?: string }>;
+  image: string;
   title: string;
   tagline: string;
   body: string;
@@ -27,6 +34,7 @@ const services: Service[] = [
   {
     id: "airport",
     Icon: Plane,
+    image: airportImg,
     title: "Airport Transfers",
     tagline: "Curb-to-cabin in five-star comfort.",
     body: "Meet-and-greet pickups at every major Nigerian airport. We monitor flight times, track delays and ensure your chauffeur is curbside the moment you land.",
@@ -40,6 +48,7 @@ const services: Service[] = [
   {
     id: "corporate",
     Icon: Briefcase,
+    image: corporateImg,
     title: "Corporate Chauffeur",
     tagline: "A mobile boardroom for your busiest day.",
     body: "Hourly, half-day or full-day chauffeur hire for executives, board members and visiting delegations. Discreet, on-time and dressed to match your brand.",
@@ -53,6 +62,7 @@ const services: Service[] = [
   {
     id: "weddings",
     Icon: Heart,
+    image: weddingsImg,
     title: "Weddings & Events",
     tagline: "An entrance worthy of the moment.",
     body: "Bridal cars, family convoys and guest shuttles arranged with the same care as the rest of your day. Ribbons, signage and decor coordinated with your planner.",
@@ -66,6 +76,7 @@ const services: Service[] = [
   {
     id: "tours",
     Icon: Camera,
+    image: toursImg,
     title: "City Tours",
     tagline: "Discover Nigeria from the back of a flagship.",
     body: "Guided private tours of Lagos, Abuja, Calabar and Lekki. Curated stops, English-speaking chauffeur-guides and full flexibility on the day.",
@@ -79,6 +90,7 @@ const services: Service[] = [
   {
     id: "interstate",
     Icon: MapIcon,
+    image: interstateImg,
     title: "Inter-state Travel",
     tagline: "Long-distance comfort, end to end.",
     body: "Lagos–Abuja, Abuja–Kaduna, Lagos–Ibadan, Port Harcourt–Owerri and beyond. Two-driver options for overnight runs, with route planning and rest stops included.",
@@ -92,6 +104,7 @@ const services: Service[] = [
   {
     id: "security",
     Icon: ShieldCheck,
+    image: securityImg,
     title: "Secure VIP Movement",
     tagline: "Discretion, protocol and peace of mind.",
     body: "For dignitaries and high-profile clients, we coordinate convoy protocol, lead vehicles and (on request) licensed security partners.",
@@ -134,11 +147,21 @@ export default function Services() {
             <article
               key={s.id}
               id={s.id}
-              className="group relative flex flex-col rounded-lg border border-border bg-card/60 p-7 shadow-luxe transition-colors hover:border-primary/50 scroll-mt-28"
+              className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card/60 shadow-luxe transition-colors hover:border-primary/50 scroll-mt-28"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/40 text-primary">
-                <s.Icon className="h-5 w-5" />
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-primary/50 bg-background/80 text-primary backdrop-blur">
+                  <s.Icon className="h-5 w-5" />
+                </div>
               </div>
+              <div className="flex flex-1 flex-col p-7 pt-5">
               <h2 className="mt-5 font-display text-2xl">{s.title}</h2>
               <p className="mt-1 text-sm italic text-primary/80">{s.tagline}</p>
               <p className="mt-4 text-sm text-muted-foreground">{s.body}</p>
@@ -159,6 +182,7 @@ export default function Services() {
                 >
                   Request quote <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
+              </div>
               </div>
             </article>
           ))}

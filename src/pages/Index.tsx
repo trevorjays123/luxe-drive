@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Award, Clock, ShieldCheck, Wifi, Zap, Umbrella, Droplets, Cookie, Phone, ArrowRight } from "lucide-react";
+import { Award, Clock, ShieldCheck, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Seo } from "@/components/Seo";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -12,6 +12,11 @@ import { CITIES, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
 import heroImg from "@/assets/hero.jpg";
 import chauffeurImg from "@/assets/chauffeur.jpg";
+import wifiImg from "@/assets/amenities/wifi.jpg";
+import chargerImg from "@/assets/amenities/charger.jpg";
+import umbrellaImg from "@/assets/amenities/umbrella.jpg";
+import waterImg from "@/assets/amenities/water.jpg";
+import snacksImg from "@/assets/amenities/snacks.jpg";
 
 export default function Index() {
   return (
@@ -34,8 +39,8 @@ export default function Index() {
             height={1080}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-onyx-overlay" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
         </div>
         <div className="container-luxe flex min-h-[88vh] flex-col justify-center py-24">
           <span className="eyebrow animate-fade-up">WHYTE Logistics</span>
@@ -155,12 +160,12 @@ export default function Index() {
               Small comforts. <span className="italic text-gradient-gold">Big difference.</span>
             </h2>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
-            <Amenity Icon={Wifi} label="Free WiFi" />
-            <Amenity Icon={Zap} label="Phone Charger" />
-            <Amenity Icon={Umbrella} label="Umbrella" />
-            <Amenity Icon={Droplets} label="Bottled Water" />
-            <Amenity Icon={Cookie} label="Snacks" />
+          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
+            <Amenity img={wifiImg} label="Free WiFi" />
+            <Amenity img={chargerImg} label="Phone Charger" />
+            <Amenity img={umbrellaImg} label="Umbrella" />
+            <Amenity img={waterImg} label="Bottled Water" />
+            <Amenity img={snacksImg} label="Snacks" />
           </div>
         </div>
       </section>
@@ -228,16 +233,21 @@ function Pillar({
 }
 
 function Amenity({
-  Icon,
+  img,
   label,
 }: {
-  Icon: React.ComponentType<{ className?: string }>;
+  img: string;
   label: string;
 }) {
   return (
-    <div className="flex flex-col items-center gap-3 text-center">
-      <div className="flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-background text-primary">
-        <Icon className="h-6 w-6" />
+    <div className="group flex flex-col items-center gap-3 text-center">
+      <div className="overflow-hidden rounded-full border border-primary/40 bg-background h-24 w-24 sm:h-28 sm:w-28">
+        <img
+          src={img}
+          alt={label}
+          loading="lazy"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
       </div>
       <p className="text-sm text-foreground/90">{label}</p>
     </div>
