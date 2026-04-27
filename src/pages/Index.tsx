@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FleetCard } from "@/components/FleetCard";
 import { BookingForm } from "@/components/BookingForm";
+import { Testimonials } from "@/components/Testimonials";
 import { fleet } from "@/data/fleet";
 import { CITIES, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
@@ -163,6 +164,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* BOOKING FORM */}
       <section className="container-luxe py-24" id="book">
