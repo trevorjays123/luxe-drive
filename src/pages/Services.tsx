@@ -13,10 +13,17 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { generalInquiryMessage } from "@/lib/whatsapp";
+import airportImg from "@/assets/services/airport.jpg";
+import corporateImg from "@/assets/services/corporate.jpg";
+import weddingsImg from "@/assets/services/weddings.jpg";
+import toursImg from "@/assets/services/tours.jpg";
+import interstateImg from "@/assets/services/interstate.jpg";
+import securityImg from "@/assets/services/security.jpg";
 
 interface Service {
   id: string;
   Icon: React.ComponentType<{ className?: string }>;
+  image: string;
   title: string;
   tagline: string;
   body: string;
