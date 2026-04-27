@@ -147,11 +147,21 @@ export default function Services() {
             <article
               key={s.id}
               id={s.id}
-              className="group relative flex flex-col rounded-lg border border-border bg-card/60 p-7 shadow-luxe transition-colors hover:border-primary/50 scroll-mt-28"
+              className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card/60 shadow-luxe transition-colors hover:border-primary/50 scroll-mt-28"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/40 text-primary">
-                <s.Icon className="h-5 w-5" />
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-primary/50 bg-background/80 text-primary backdrop-blur">
+                  <s.Icon className="h-5 w-5" />
+                </div>
               </div>
+              <div className="flex flex-1 flex-col p-7 pt-5">
               <h2 className="mt-5 font-display text-2xl">{s.title}</h2>
               <p className="mt-1 text-sm italic text-primary/80">{s.tagline}</p>
               <p className="mt-4 text-sm text-muted-foreground">{s.body}</p>
