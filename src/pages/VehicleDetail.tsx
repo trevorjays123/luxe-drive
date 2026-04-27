@@ -88,6 +88,7 @@ export default function VehicleDetail() {
                 alt={`${vehicle.name} luxury chauffeur car`}
                 width={1280}
                 height={900}
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
