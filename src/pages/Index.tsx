@@ -37,6 +37,9 @@ export default function Index() {
             alt="Chauffeur opening door of luxury Mercedes-Benz S-Class at a hotel"
             width={1920}
             height={1080}
+            decoding="async"
+            // @ts-expect-error fetchpriority is a valid HTML attribute
+            fetchpriority="high"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/45 to-transparent" />
