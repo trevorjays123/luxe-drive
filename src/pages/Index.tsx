@@ -34,8 +34,8 @@ export default function Index() {
             height={1080}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-onyx-overlay" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
         </div>
         <div className="container-luxe flex min-h-[88vh] flex-col justify-center py-24">
           <span className="eyebrow animate-fade-up">WHYTE Logistics</span>

@@ -1,7 +1,7 @@
 export const SITE_NAME = "WHYTE Logistics";
 export const SITE_SHORT = "WHYTE";
 export const SITE_TAGLINE = "Comfort. Prompt. Professional.";
-export const CITIES = ["Abuja", "Lagos", "Port Harcourt", "Kano", "Enugu"];
+export const CITIES = ["Abuja", "Lagos", "Port Harcourt", "Kano", "Enugu", "Edo", "Delta"];
 
 export function getSiteUrl(): string {
   if (typeof window !== "undefined") return window.location.origin;
