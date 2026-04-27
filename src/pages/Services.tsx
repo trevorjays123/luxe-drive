@@ -34,6 +34,7 @@ const services: Service[] = [
   {
     id: "airport",
     Icon: Plane,
+    image: airportImg,
     title: "Airport Transfers",
     tagline: "Curb-to-cabin in five-star comfort.",
     body: "Meet-and-greet pickups at every major Nigerian airport. We monitor flight times, track delays and ensure your chauffeur is curbside the moment you land.",
@@ -47,6 +48,7 @@ const services: Service[] = [
   {
     id: "corporate",
     Icon: Briefcase,
+    image: corporateImg,
     title: "Corporate Chauffeur",
     tagline: "A mobile boardroom for your busiest day.",
     body: "Hourly, half-day or full-day chauffeur hire for executives, board members and visiting delegations. Discreet, on-time and dressed to match your brand.",
@@ -60,6 +62,7 @@ const services: Service[] = [
   {
     id: "weddings",
     Icon: Heart,
+    image: weddingsImg,
     title: "Weddings & Events",
     tagline: "An entrance worthy of the moment.",
     body: "Bridal cars, family convoys and guest shuttles arranged with the same care as the rest of your day. Ribbons, signage and decor coordinated with your planner.",
@@ -73,6 +76,7 @@ const services: Service[] = [
   {
     id: "tours",
     Icon: Camera,
+    image: toursImg,
     title: "City Tours",
     tagline: "Discover Nigeria from the back of a flagship.",
     body: "Guided private tours of Lagos, Abuja, Calabar and Lekki. Curated stops, English-speaking chauffeur-guides and full flexibility on the day.",
@@ -86,6 +90,7 @@ const services: Service[] = [
   {
     id: "interstate",
     Icon: MapIcon,
+    image: interstateImg,
     title: "Inter-state Travel",
     tagline: "Long-distance comfort, end to end.",
     body: "Lagos–Abuja, Abuja–Kaduna, Lagos–Ibadan, Port Harcourt–Owerri and beyond. Two-driver options for overnight runs, with route planning and rest stops included.",
@@ -99,6 +104,7 @@ const services: Service[] = [
   {
     id: "security",
     Icon: ShieldCheck,
+    image: securityImg,
     title: "Secure VIP Movement",
     tagline: "Discretion, protocol and peace of mind.",
     body: "For dignitaries and high-profile clients, we coordinate convoy protocol, lead vehicles and (on request) licensed security partners.",
