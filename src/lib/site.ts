@@ -1,4 +1,5 @@
-export const SITE_NAME = "Whyte Cars Logistics";
+export const SITE_NAME = "WHYTE Logistics";
+export const SITE_SHORT = "WHYTE";
 export const SITE_TAGLINE = "Comfort. Prompt. Professional.";
 export const CITIES = ["Abuja", "Lagos", "Port Harcourt", "Kano", "Enugu"];
 

@@ -12,5 +12,5 @@ export function vehicleInquiryMessage(name: string) {
 }
 
 export function generalInquiryMessage() {
-  return `Hello Whyte Cars Logistics 👋, I'd like to book a chauffeur service.`;
+  return `Hello WHYTE Logistics 👋, I'd like to book a chauffeur service.`;
 }
