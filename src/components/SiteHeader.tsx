@@ -21,6 +21,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
+import { Logo } from "@/components/Logo";
 
 const services = [
   { label: "Airport Transfers", to: "/services#airport" },
@@ -52,13 +53,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="container-luxe flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2" aria-label="Whyte Cars Logistics home">
-          <span className="font-display text-xl tracking-tight">
-            Whyte<span className="text-gradient-gold"> Cars</span>
-          </span>
-          <span className="hidden text-[10px] uppercase tracking-[0.3em] text-muted-foreground md:inline">
-            Logistics
-          </span>
+        <Link to="/" className="flex items-center" aria-label="WHYTE Logistics home">
+          <Logo size={40} />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

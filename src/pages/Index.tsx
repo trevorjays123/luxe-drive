@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FleetCard } from "@/components/FleetCard";
 import { BookingForm } from "@/components/BookingForm";
+import { Testimonials } from "@/components/Testimonials";
 import { fleet } from "@/data/fleet";
 import { CITIES, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
@@ -16,7 +17,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Whyte Cars Logistics — Luxury Chauffeur Car Hire in Nigeria"
+        title="WHYTE Logistics — Luxury Chauffeur Car Hire in Nigeria"
         description="Premium chauffeur-driven luxury car rentals in Abuja, Lagos, Port Harcourt, Kano and Enugu. Mercedes S-Class, G-Class, Range Rover, Escalade and more."
         canonicalPath="/"
         ogImage={heroImg}
@@ -37,7 +38,7 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
         </div>
         <div className="container-luxe flex min-h-[88vh] flex-col justify-center py-24">
-          <span className="eyebrow animate-fade-up">Whyte Logistics</span>
+          <span className="eyebrow animate-fade-up">WHYTE Logistics</span>
           <h1 className="mt-5 max-w-3xl font-display text-5xl leading-[1.05] md:text-7xl lg:text-[5.5rem] animate-fade-up">
             Luxury Car Rentals
             <br />
@@ -163,6 +164,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* BOOKING FORM */}
       <section className="container-luxe py-24" id="book">

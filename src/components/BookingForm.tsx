@@ -74,7 +74,7 @@ export function BookingForm({ prefill, className }: Props) {
       action: {
         label: "Open WhatsApp",
         onClick: () => {
-          const msg = `Hello Whyte Cars 👋,\nI'd like to book the ${values.vehicle} for ${values.service}.\nName: ${values.name}\nDate: ${values.date}\nPickup: ${values.pickup}\nDrop-off: ${values.dropoff}\nPhone: ${values.phone}`;
+          const msg = `Hello WHYTE Logistics 👋,\nI'd like to book the ${values.vehicle} for ${values.service}.\nName: ${values.name}\nDate: ${values.date}\nPickup: ${values.pickup}\nDrop-off: ${values.dropoff}\nPhone: ${values.phone}`;
           window.open(whatsappLink(msg), "_blank");
         },
       },

@@ -3,14 +3,15 @@ import { Mail, MapPin, Phone, Instagram, Facebook, Twitter } from "lucide-react"
 import { fleet } from "@/data/fleet";
 import { CITIES, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { EMAIL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
+import { Logo } from "@/components/Logo";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-card/40">
       <div className="container-luxe grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link to="/" className="font-display text-2xl">
-            Whyte<span className="text-gradient-gold"> Cars</span>
+          <Link to="/" aria-label="WHYTE Logistics home">
+            <Logo size={44} />
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">{SITE_TAGLINE}</p>
           <p className="mt-3 text-sm text-muted-foreground">

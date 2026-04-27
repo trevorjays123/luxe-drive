@@ -17,7 +17,7 @@ export default function FleetIndex() {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Our Luxury Fleet — Whyte Cars Logistics"
+        title="Our Luxury Fleet — WHYTE Logistics"
         description="Browse our chauffeur-driven luxury fleet — Mercedes S-Class, G-Class, V-Class, Sprinter, Lexus LX 600, Range Rover Sport, Cadillac Escalade and more."
         canonicalPath="/fleet"
       />
